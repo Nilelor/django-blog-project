@@ -18,6 +18,8 @@ class Comment(models.Model):
 	post=models.ForeignKey(Post)
 	def exactBody(self):
 		return self.body[:60]
+	def __unicode__(self):
+		return self.author
 
 
 
